@@ -1,4 +1,16 @@
 import pymongo
-client = pymongo.MongoClient("mongodb+srv://ineuron:mongodb123@cluster0.goi2j.mongodb.net/?retryWrites=true&w=majority")
+
+import main
+
+client = pymongo.MongoClient("mongodb+srv://RootJix:Jix@clusterjix.eh0oq.mongodb.net/?retryWrites=true&w=majority")
 db = client.test
-print(db)
+data={
+
+    "name" : "Jitendra",
+    "MailId": "JIx@gmail.com",
+    "Subject":["maths", "english","science"]
+}
+
+database = client['myinfo']
+collections= database["jix"]
+collections.insert_one(data)
